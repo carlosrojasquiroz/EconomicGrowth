@@ -1,21 +1,21 @@
 # Crecimiento Ecónomico
-Este repositorio contiene archivos de Excel y Matlab que tratan los datos del Penn World Table (PWT 10.0) y de Madisson Project (MP) y los procesan para replicar los gráficos y estimaciones de Acemoglu (2009), Barro y Sala-i-Martin (1992) y Mankiw, Reis y Weil (1992). 
-Este trabajo no pretende ser riguroso en el uso de la programación. Es, sobre todo, una guía inicial para estudiantes de pre-grado respecto del uso y estimación de datos y modelos de crecimiento económico. 
-Cualquier duda, omisión o sugerencia puede ser enviada a mi correo electrónico:
+Este repositorio contiene archivos de Excel y Matlab que tratan los datos del Penn World Table (PWT 10.0) y de Madisson Project (MP) y los procesan para replicar los gráficos y estimaciones de Acemoglu (2009), Barro y Sala-i-Martin (1992) y Mankiw, Reis y Weil (1992).
 
+Este trabajo no pretende ser riguroso en el uso de la programación. Es, sobre todo, una guía inicial para estudiantes de pre-grado respecto del uso y estimación de datos y modelos de crecimiento económico.
+
+Cualquier duda, omisión o sugerencia puede ser enviada a mi correo electrónico:
 **carlosrojasquiroz@gmail.com**
 
 El repositorio contiene los siguientes archivos:
 
-        *PWT.xlsx*
-
-        *Graphs_GDPpc.m*
-        *MRWestimations.m*
-        *ContributionToGrowth.m*
+       PWT.xlsx
+       
+       Graphs_GDPpc.m
+       MRWestimations.m
+       ContributionToGrowth.m
 
 
 ***Hechos empíricos del crecimiento económico (replica de figuras del capítulo 1 de Acemoglu, 2009)***
-
 
 *Lista de figuras:*
 1. Distribución del PIB per cápita
