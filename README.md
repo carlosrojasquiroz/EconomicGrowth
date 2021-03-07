@@ -1,40 +1,39 @@
 # Crecimiento Ecónomico
-Contiene archivos de Excel y Matlab que tratan los datos del Penn World Table (PWT 10.0) y los procesan para replicar los gráficos y ejercicios de estimación de Acemoglu (2009) y Mankiw, Reis y Weil (1992).
+Este repositorio contiene archivos de Excel y Matlab que tratan los datos del Penn World Table (PWT 10.0) y de Madisson Project (MP) y los procesan para replicar los gráficos y estimaciones de Acemoglu (2009), Barro y Sala-i-Martin (1992) y Mankiw, Reis y Weil (1992). 
+Este trabajo no pretende ser riguroso en el uso de la programación. Es, sobre todo, una guía inicial para estudiantes de pre-grado respecto del uso y estimación de datos y modelos de crecimiento económico. 
+Cualquier duda, omisión o sugerencia puede ser enviada a mi correo electrónico:
 
-✶ Hechos empíricos del crecimiento económico (replica de figuras del capítulo 1 de Acemoglu, 2009)
+**carlosrojasquiroz@gmail.com**
 
-𝟭. Distribución del PIB per cápita
+El repositorio contiene los siguientes archivos:
 
-𝟮. Distribución del Log del PIB per cápita
+        *PWT.xlsx*
 
-𝟯. Distribución del Log del PIB por trabajador empleado
+        *Graphs_GDPpc.m*
+        *MRWestimations.m*
+        *ContributionToGrowth.m*
 
-𝟰. Relación entre el PIB pc y el Consumo pc
 
-𝟱. Distribución del crecimiento del PIB por trabajador empleado
+***Hechos empíricos del crecimiento económico (replica de figuras del capítulo 1 de Acemoglu, 2009)***
 
-𝟲. Relación entre Log(PIB)/Log(PIB USA) de 1960 y 2019
 
-𝟳. Relación entre Log(PIB)/Log(PIB USA) de 1960 y 2000
+*Lista de figuras:*
+1. Distribución del PIB per cápita
+2. Distribución del Log del PIB per cápita
+3. Distribución del Log del PIB por trabajador empleado
+4. Relación entre el PIB pc y el Consumo pc
+5. Distribución del crecimiento del PIB por trabajador empleado
+6. Relación entre Log(PIB)/Log(PIB USA) de 1960 y 2019
+7. Relación entre Log(PIB)/Log(PIB USA) de 1960 y 2000
+8. Relación entre Log(PIB)/Log(PIB USA) de 1960 y 1980
+9. Distribución del Log del PIB per cápita ponderado por la población
+10. Relación entre el crecimiento promedio del PIB pc y el promedio Inversión/PIB entre 1960-2019 
+11. Relación entre el crecimiento promedio del PIB pc y el promedio Capital Humano entre 1960-2019 
+12. Relación entre el crecimiento promedio del PIB pc y el promedio Matrícula Primaria/Secundaria entre 1960-2019 
+13. Evolución del PIB per cápita entre países, 1960-2019
+14. Evolución del PIB per cápita entre países, 1870-2019
 
-𝟴. Relación entre Log(PIB)/Log(PIB USA) de 1960 y 1980
+***Análisis de las diferencias de PIB per cápita entre países (MRW, 1992)***
 
-𝟵. Distribución del Log del PIB per cápita ponderado por la población
 
-𝟭𝟬. Relación entre el crecimiento promedio del PIB pc y el promedio Inversión/PIB entre 1960-2019 
-
-𝟭𝟭. Relación entre el crecimiento promedio del PIB pc y el promedio Capital Humano entre 1960-2019 
-
-𝟭𝟮. Relación entre el crecimiento promedio del PIB pc y el promedio Matrícula Primaria/Secundaria entre 1960-2019 
-
-𝟭𝟯. Evolución del PIB per cápita entre países, 1960-2019
-
-𝟭𝟰. Evolución del PIB per cápita entre países, 1870-2019
-
----------------------------------------------------------------------------------------------------------
-✶ Análisis de las diferencias de PIB per cápita entre países (MRW, 1992)
----------------------------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------------------------
-✶ Hechos estilizados del crecimiento económico en el caso peruano (tomado de Barro y Sala-i-Martin + PWT)
----------------------------------------------------------------------------------------------------------
+***Hechos estilizados del crecimiento económico en el caso peruano (tomado de Barro y Sala-i-Martin + PWT)***
