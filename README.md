@@ -1,7 +1,7 @@
 # Crecimiento Ecónomico
-Este repositorio contiene archivos de Excel y Matlab que tratan los datos del Penn World Table (PWT 10.0) y de Madisson Project (MP) y los procesan para replicar los gráficos y estimaciones de Acemoglu (2009), Barro y Sala-i-Martin (1992) y Mankiw, Reis y Weil (1992).
+Este repositorio contiene archivos de Excel y Matlab que tratan los datos del Penn World Table (PWT 10.0) y de Madisson Project Database (MPD 2020) y los procesan para replicar los gráficos y estimaciones de Acemoglu (2009), Barro y Sala-i-Martin (1992) y Mankiw, Reis y Weil (1992).
 
-Este trabajo no pretende ser riguroso en el uso de la programación. Es, sobre todo, una guía inicial para estudiantes de pre-grado respecto del uso y estimación de datos y modelos de crecimiento económico.
+Este trabajo no pretende ser riguroso en el uso de la programación. Es, sobre todo, una guía inicial para estudiantes de pre-grado respecto del uso y estimación de datos y modelos de crecimiento económico. En ese sentido, procesamos la información en Excel, la importamos y graficamos o estimamos los modelos en Matlab. 
 
 Cualquier duda, omisión o sugerencia puede ser enviada a mi correo electrónico:
 **carlosrojasquiroz@gmail.com**
@@ -14,6 +14,12 @@ El repositorio contiene los siguientes archivos:
        MRWestimations.m
        ContributionToGrowth.m
 
+*PWT.xlsx*
+Data
+Graphs
+Evolution
+MRW
+BarroLee
 
 ***Hechos empíricos del crecimiento económico (replica de figuras del capítulo 1 de Acemoglu, 2009)***
 
@@ -37,3 +43,8 @@ El repositorio contiene los siguientes archivos:
 
 
 ***Hechos estilizados del crecimiento económico en el caso peruano (tomado de Barro y Sala-i-Martin + PWT)***
+
+
+***Contabilidad del crecimiento***
+
+
