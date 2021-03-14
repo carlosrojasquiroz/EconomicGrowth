@@ -1,5 +1,5 @@
 # Economic growth
-This repository houses files for Excel and Matlab, which process data from Penn World Table (PWT 10.0) and Maddison Project Database (MPD 2020) to replicate figures and run regressions as in Acemoglu (2009) and Mankiw, Romer y Weil (1992).
+This repository houses Excel and Matlab files, which process data from Penn World Table (PWT 10.0) and Maddison Project Database (MPD 2020) to replicate figures and run regressions as in Acemoglu (2009) and Mankiw, Romer y Weil (1992).
 
 If you have questions, please contact me by email at:
 **carlosrojasquiroz@gmail.com**
