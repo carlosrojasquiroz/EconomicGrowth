@@ -1,17 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inconditional convergence exercises
+% (c) Carlos Rojas Quiroz
+% This version: 14.03.2021
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: Maddison Project Database 2020
+% Observations: 67 countries for three years (1870, 1979 and 2018)
+% External functions:
+%   In order to run this code, you require the function "ols2":
+%   [Betahat, Yhat] = ols(Y,X,D,Alpha)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all;
 clc;
 close all;
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 load GDPpc_1870_2018.mat
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Baumol sample
 % Japan, Finland, Sweden, Norway, Germany, Italy, Austria, France, Canada, 
 % Denmark, the United States, the Netherlands, Switzerland, Belgium, 
 % the United Kingdom, and Australia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Tstart=1870;
 Tend=1979;
-
 sample=[35, 20, 56, 44, 14, 32, 4, 21, 8, 15, 63, 43, 9, 5, 22, 3]; % 
-
 for i=1:length(sample)
 % X axis: log(GDPpc)
 X(i,1)=log(BarroEq(sample(i),1));
@@ -58,17 +69,17 @@ ylabel('Diferencia logarítmica','FontName','Serif','FontSize', 14)
 title('Muestra de Baumol','FontName','Serif','FontSize', 14)
 legend('1870-1979','1870-2018')
 saveas(gcf,'Baumol','epsc');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% De Long sample
 % Finland, Sweden, Norway, Germany, Italy, Austria, France, Canada, 
 % Denmark, the United States, the Netherlands, Switzerland, Belgium, 
 % the United Kingdom, and Australia
 % Argentina, Chile, East Germany, Ireland, New Zealand, Portugal, and Spain.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Tstart=1870;
 Tend=1979;
-
 sample=[20, 56, 44, 14, 32, 4, 21, 8, 15, 63, 43, 9, 5,...
     22, 3, 2, 10, 29, 46, 51, 19]; % 
-
 for i=1:length(sample)
 % X axis: log(GDPpc)
 X3(i,1)=log(BarroEq(sample(i),1));
@@ -119,8 +130,9 @@ ylabel('Diferencia logarítmica','FontName','Serif','FontSize', 14)
 title('Muestra de De Long','FontName','Serif','FontSize', 14)
 legend('1870-1979','1870-1979: nuevos países','1870-2018','1870-2018: nuevos países')
 saveas(gcf,'DeLong','epsc');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Maddison sample
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Tstart=1870;
 Tend=1979;
 % X axis: log(GDPpc)
@@ -128,7 +140,6 @@ X5(:,1)=log(BarroEq(:,1));
 % Y axis: log(GDPpc2018/GDPpc1870)
 Y5(:,1)=log(BarroEq(:,2)./BarroEq(:,1));
 [~,Yhat5]=ols2(Y5,X5,1,0.05);
-
 Tend=2018;
 % X axis: log(GDPpc)
 X6(:,1)=log(BarroEq(:,1));
@@ -156,18 +167,18 @@ ylabel('Diferencia logarítmica','FontName','Serif','FontSize', 14)
 title('Muestra de Maddison','FontName','Serif','FontSize', 14)
 legend('1870-1979','1870-1979: nuevos países','1870-2018','1870-2018: nuevos países')
 saveas(gcf,'Maddison','epsc');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Developing vs developed economies
 % IMF classification 
 % (see: https://en.wikipedia.org/wiki/Developing_country)
 % Source: WEO database, october 2018
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Tstart=1870;
 Tend=2018;
-
 sample=[1     2     7    10    11    12    16    17    18    23    26   ...
     27    28    30    31    33    34    37    38    39    40    41  ...
     42    45    47    48    49    50    52    53    54    57    58  ...
     59    60    61    62    64    65    67]; % Developing economies
-
 for i=1:length(sample)
 % X axis: log(GDPpc)
 X7(i,1)=log(BarroEq(sample(i),1));
@@ -182,10 +193,10 @@ end
 Y7(i,1)=log(BarroEq(sample(i),j)./BarroEq(sample(i),1));
 end
 [~,Yhat7]=ols2(Y7,X7,1,0.05);
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 sample=[3     4     5     6     8     9    13    14    15    19    20   ...
     21    22    24    25    29    32    35    36    43    44    46  ...
-    51    55    56    63    66]; % Advanced economies
+    51    55    56    63    66]; % Developed economies
 for i=1:length(sample)
 % X axis: log(GDPpc)
 X8(i,1)=log(BarroEq(sample(i),1));
