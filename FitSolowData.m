@@ -7,46 +7,29 @@
 % I use a database comprises of up to three sources: (1) PWT 10.0, 
 % (2) World Bank data on working-age people, and (3) the Barro and Lee 
 % dataset on educational enrollment ratios. The sample span is 1960-2019.
-
 % Abbreviations:
-% NCEx: non-commodity exporter countries
-% SCAP: countries with soundness statistical 
-% capacity
-% OECD: ~~
-
+%   NCEx: non-commodity exporter countries
+%   SCAP: countries with soundness statistical capacity
+%   OECD: ~~
 % Observations:
-% NCEx: 72
-% SCAP: 92
-% OECD: 29
-% All sample: 104
-
+%   NCEx: 72
+%   SCAP: 92
+%   OECD: 29
+%   All sample: 104
 % External functions:
-% In order to run this code, you require the function "ols":
-% [Betahat, DeBeta, Pvalue, RsquareAdj] = ols(Y,X,D,Alpha)
-% Inputs:
-%       X = Vector with the endogenous variable
-%       Y = Matrix with exogenous variables
-%       D = Binary variable. If:
-%           D = 1, then run the regression with a constant
-%           D = 0, then run the regression without a constant
-%       Alpha = statistical significance level
-% Outputs:
-%       Betahat = estimated parameters
-%       DeBeta = standard deviation for each estimated parameter (not
-%       robust)
-%       Pvalue = ~~
-%       RsquareAdj = adjusted R^2
+%   In order to run this code, you require the function "ols":
+%   [Betahat, DeBeta, Pvalue, RsquareAdj] = ols(Y,X,D,Alpha)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all;
 clc;
 close all;
-NCEx=xlsread('DataBaseGrowth.xlsx','NewSample','B3:F148');
+NCEx=xlsread('DataBaseGrowth14032021.xlsx','NewSample','B3:F148');
 NCEx(any(isnan(NCEx),2), :) = [];
-SCAP=xlsread('DataBaseGrowth.xlsx','NewSample','G3:K148');
+SCAP=xlsread('DataBaseGrowth14032021.xlsx','NewSample','G3:K148');
 SCAP(any(isnan(SCAP),2), :) = [];
-OECD=xlsread('DataBaseGrowth.xlsx','NewSample','L3:P148');
+OECD=xlsread('DataBaseGrowth14032021.xlsx','NewSample','L3:P148');
 OECD(any(isnan(OECD),2), :) = [];
-ALLS=xlsread('DataBaseGrowth.xlsx','NewSample','Q3:U148');
+ALLS=xlsread('DataBaseGrowth14032021.xlsx','NewSample','Q3:U148');
 ALLS(any(isnan(ALLS),2), :) = [];
 Data={NCEx,SCAP,OECD,ALLS};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
