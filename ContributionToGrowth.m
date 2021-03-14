@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contribution to growth - exercises for six countries
+% (c) Carlos Rojas Quiroz
+% This version: 14.03.2021
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sources: PWT 10.0, 
+% Observations: 60 years for six countries
+% Titles and axis labels are in Spanish. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all;
 clc;
 close all;
@@ -9,7 +18,9 @@ DataNewZealand=xlsread('ContributiontoGrowth14032021.xlsx','NewZealand','K14:N73
 DataKorea=xlsread('ContributiontoGrowth14032021.xlsx','Korea','K14:N73');
 [F,C]=size(DataPeru);
 X=[1960:1:1960+F-1]';
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Peru
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(1)
 StackedBars=DataPeru(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
@@ -21,8 +32,9 @@ xlabel('Años','FontName','Serif','FontSize', 14);
 ylabel('Crecimiento anual (%)','FontName','Serif','FontSize', 14);
 legend('K','L','A','FontName','Serif','FontSize', 14,'Location','southoutside','Orientation','horizontal')
 saveas(gcf,'ContributionPeru','epsc');
-
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% New Zealand
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(2)
 StackedBars=DataNewZealand(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
@@ -34,8 +46,9 @@ xlabel('Años','FontName','Serif','FontSize', 14);
 ylabel('Crecimiento anual (%)','FontName','Serif','FontSize', 14);
 legend('K','L','A','FontName','Serif','FontSize', 14,'Location','southoutside','Orientation','horizontal')
 saveas(gcf,'ContributionNewZealand','epsc');
-
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Australia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(3)
 StackedBars=DataAustralia(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
@@ -47,8 +60,9 @@ xlabel('Años','FontName','Serif','FontSize', 14);
 ylabel('Crecimiento anual (%)','FontName','Serif','FontSize', 14);
 legend('K','L','A','FontName','Serif','FontSize', 14,'Location','southoutside','Orientation','horizontal')
 saveas(gcf,'ContributionAustralia','epsc');
-
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% South Korea
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(4)
 StackedBars=DataKorea(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
@@ -60,8 +74,9 @@ xlabel('Años','FontName','Serif','FontSize', 14);
 ylabel('Crecimiento anual (%)','FontName','Serif','FontSize', 14);
 legend('K','L','A','FontName','Serif','FontSize', 14,'Location','southoutside','Orientation','horizontal')
 saveas(gcf,'ContributionCorea','epsc');
-
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Chile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(5)
 StackedBars=DataChile(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
@@ -73,8 +88,9 @@ xlabel('Años','FontName','Serif','FontSize', 14);
 ylabel('Crecimiento anual (%)','FontName','Serif','FontSize', 14);
 legend('K','L','A','FontName','Serif','FontSize', 14,'Location','southoutside','Orientation','horizontal')
 saveas(gcf,'ContributionChile','epsc');
-
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Colombia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(6)
 StackedBars=DataColombia(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
