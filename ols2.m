@@ -1,11 +1,19 @@
 function [Betahat, Yhat] = ols2(Y,X,D,Alpha)
-    % Funcion para obtener el estimador de Minimos Cuadrados Ordinarios
-    % X = Matriz de variables independientes
-    % Y = Vector de variable dependiente
-    % D = Variable indicadora respecto a la presencia de una constante
-            % D = 1 indica la presencia de una constante
-            % D = 0 indica la no presencia de una constante
-    % Alpha = Nivel de significancia seleccionado por el usuario
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Running a simple ordinary least squares estimation. 
+% You will obtain an Eviews-style table with your results 
+% (c) Carlos Rojas Quiroz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [Betahat, Yhat] = ols(Y,X,D,Alpha)
+% Inputs:
+%       X = Vector with the endogenous variable
+%       Y = Matrix with exogenous variables
+%       D = Binary variable. If D = 1, run the regression with a constant
+%       Alpha = statistical significance level
+% Outputs:
+%       Betahat = Estimated coefficients
+%       Yhat = Fitted Y variable
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     if D==1
         C=ones(length(Y(:,1)),1);
         X=[X C];
@@ -33,13 +41,13 @@ function [Betahat, Yhat] = ols2(Y,X,D,Alpha)
     for jj=1:(length(X(1,:))-1)
         BetaLabel{jj}=['Beta' '_' num2str(jj)];
     end
-        BetaLabel{length(X(1,:))}='Constante';        
+        BetaLabel{length(X(1,:))}='Constant';        
     Tabla1=table(Resultados(:,1),Resultados(:,2),Resultados(:,3),Resultados(:,4),Resultados(:,5),Resultados(:,6));
     Tabla1.Properties.VariableNames = {'Coef','StdErr','t','Pvalue','ICInf','ICSup'};
     Tabla1.Properties.RowNames = BetaLabel';
     R2=[Rsquare RsquareAdj];
     Tabla2=table(R2(:,1),R2(:,2));
-    Tabla2.Properties.VariableNames = {'RCuadrado','RCuadradoAj'};
+    Tabla2.Properties.VariableNames = {'RSquare','RSquareAdj'};
     disp(Tabla1)
     disp(Tabla2)
 end
