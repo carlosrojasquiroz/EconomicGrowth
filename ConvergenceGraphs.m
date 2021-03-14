@@ -8,6 +8,7 @@
 % External functions:
 %   In order to run this code, you require the function "ols2":
 %   [Betahat, Yhat] = ols(Y,X,D,Alpha)
+% Titles and axis labels are in Spanish. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all;
 clc;
