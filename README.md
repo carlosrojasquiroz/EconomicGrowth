@@ -10,9 +10,12 @@ The repository has the following files:
        DataBaseGrowth14032021.xlsx      
        Graphs_GDPpc.m
        FitSolowData.m
+       ols.m
 
 *PWT14032021.xlsx*: data for replicating figures from Acemoglu's book.
-*Graphs_GDPpc.m*: script to generate figures. 
+*Graphs_GDPpc.m*: script to generate those figures. 
 
 *DataBaseGrowth14032021.xlsx*: data for running regressions as in MRW's paper. I do not pretend to replicate exactly them since I use different data samples than that paper.
-*FitSolowData.m*: script to generate regression estimations (see TablaX for the results).
+*FitSolowData.m*: script to generate OLS estimates (see "TablaX" object for the results).
+
+*ols.m*: own function to run OLS regressions. 
