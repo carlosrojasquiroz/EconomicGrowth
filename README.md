@@ -19,4 +19,4 @@ The repository has the following files:
 *DataBaseGrowth14032021.xlsx*: data for running regressions as in MRW's paper. I do not pretend to replicate exactly them since I use different data samples than that paper.
 *FitSolowData.m*: script to generate OLS estimates (see "TablaX" object for the results).
 
-*ols.m*: own function to run OLS regressions. 
+*ols.m* and *ols2.m*: functions to run OLS regressions (with different outputs). 
