@@ -5,10 +5,15 @@ function [Betahat, DeBeta, Pvalue, RsquareAdj] = ols(Y,X,D,Alpha)
 % (c) Carlos Rojas Quiroz
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Betahat, DeBeta, Pvalue, RsquareAdj] = ols(Y,X,D,Alpha)
+% Inputs:
 %       X = Vector with the endogenous variable
 %       Y = Matrix with exogenous variables
 %       D = Binary variable. If D = 1, run the regression with a constant
 %       Alpha = statistical significance level
+% Outputs:
+%       Betahat = Regression coefficients 
+%       DeBeta = Coefficients' standard errors
+%       Pvalue, RsquareAdj = ~
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     if D==1
         C=ones(length(Y(:,1)),1);
