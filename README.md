@@ -11,6 +11,7 @@ The repository has the following files:
        Graphs_GDPpc.m
        FitSolowData.m
        ols.m
+       ols2.m
 
 *PWT14032021.xlsx*: data for replicating figures from Acemoglu's book.
 *Graphs_GDPpc.m*: script to generate those figures. 
