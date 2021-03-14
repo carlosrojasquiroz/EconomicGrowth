@@ -9,9 +9,11 @@ The repository has the following files:
        PWT14032021.xlsx
        DataBaseGrowth14032021.xlsx
        GDPpc_1870_2018.mat
+       ContributiontoGrowth14032021.xlsx
        GraphsGrowthSF.m
        FitSolowData.m
        ConvergenceGraphs.m
+       ContributionToGrowth.m
        ols.m
        ols2.m
 
@@ -23,5 +25,8 @@ The repository has the following files:
 
 *DataBaseGrowth14032021.xlsx*: data for running regressions as in MRW's paper. I do not pretend to replicate exactly them since I use different data samples than that paper. Data from PWT10.0, MPD2020 and Barro-Lee dataset. 
 *FitSolowData.m*: script to generate OLS estimates (see "TablaX" object for the results).
+
+*ContributiontoGrowth14032021.xlsx*: database to calculate contribution to growth exercises from PWT10.0 data.
+*ContributionToGrowth.m*: script to generate stacked bar figures with data on contribution to growth.  
 
 *ols.m* and *ols2.m*: functions to run OLS regressions (with different outputs). 
