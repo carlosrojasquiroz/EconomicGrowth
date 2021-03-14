@@ -11,7 +11,7 @@ function [Betahat, Yhat] = ols2(Y,X,D,Alpha)
 %       D = Binary variable. If D = 1, run the regression with a constant
 %       Alpha = statistical significance level
 % Outputs:
-%       Betahat = Estimated coefficients
+%       Betahat = Regression coefficients
 %       Yhat = Fitted Y variable
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     if D==1
