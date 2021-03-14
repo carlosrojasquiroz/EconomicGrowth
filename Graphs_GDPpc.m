@@ -1,15 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Graficos  - crecimiento economico
+% Figures - economic growth
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % (C) Carlos Rojas Quiroz
-% Elaborados para los slides del curso
-% "Crecimiento Economico"
+% This version: 14.03.2021
+% Titles and axis labels are in Spanish
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all;
 clc;
 close all;
 %% Distribucion PIB per capita
-GDP_pc = xlsread('PWT.xlsx','Graphs','B9:E191');
+GDP_pc = xlsread('PWT14032021.xlsx','Graphs','B9:E191');
 pts=[0:100:80000];
 Dist1960=GDP_pc(:,1);
 Dist1960(any(isnan(Dist1960),2), :) = [];
@@ -69,7 +69,7 @@ saveas(gcf,'DensitylogGDPpc','epsc');
 %% Distribucion Log PIB per worker
 clear all; 
 clc;
-GDP_pc = xlsread('PWT.xlsx','Graphs','F9:I191');
+GDP_pc = xlsread('PWT14032021.xlsx','Graphs','F9:I191');
 pts=[5:0.05:14];
 Dist1960=GDP_pc(:,1);
 Dist1960(any(isnan(Dist1960),2), :) = [];
@@ -111,7 +111,7 @@ saveas(gcf,'DensityGDPpw','epsc');
 %% Ingreso y bienestar
 clear all;
 clc;
-IW_pc = xlsread('PWT.xlsx','Graphs','J9:K191');
+IW_pc = xlsread('PWT14032021.xlsx','Graphs','J9:K191');
 
 GDP=IW_pc(:,1);
 Consump=IW_pc(:,2);
@@ -133,7 +133,7 @@ saveas(gcf,'I_W','epsc');
 %% Distribucion del crecimiento del PIB por trabajador
 clear all;
 clc;
-Growth_pc = xlsread('PWT.xlsx','Graphs','T9:W191');
+Growth_pc = xlsread('PWT14032021.xlsx','Graphs','T9:W191');
 Growth60=Growth_pc(:,1);
 Growth60(any(isnan(Growth60),2), :) = [];
 Growth80=Growth_pc(:,2);
@@ -166,7 +166,7 @@ saveas(gcf,'DensityGDPpwgrowth','epsc');
 %% Diferencias de ingresos
 clear all;
 clc;
-GDP_pw = xlsread('PWT.xlsx','Graphs','X9:AA191');
+GDP_pw = xlsread('PWT14032021.xlsx','Graphs','X9:AA191');
 GDP_pw(any(isnan(GDP_pw),2), :) = [];
 GDP_pw60=GDP_pw(:,1);
 GDP_pw80=GDP_pw(:,2);
@@ -228,7 +228,7 @@ saveas(gcf,'RelativeUSA80','epsc');
 %% Distribucion Log GDP per capita ponderado por poblacion
 clear all;
 clc;
-GDP_pcN = xlsread('PWT.xlsx','Graphs','AF9:AI191');
+GDP_pcN = xlsread('PWT14032021.xlsx','Graphs','AF9:AI191');
 pts=[-5:0.01:8];
 Dist1960=GDP_pcN(:,1);
 Dist1960(any(isnan(Dist1960),2), :) = [];
@@ -261,7 +261,7 @@ saveas(gcf,'DensitylogGDPpcN','epsc');
 %% Factores correlacionados
 clear all;
 clc;
-Base = xlsread('PWT.xlsx','Graphs','AJ9:AP191');
+Base = xlsread('PWT14032021.xlsx','Graphs','AJ9:AP191');
 IY19=Base(:,[2,6]);
 IY19(any(isnan(IY19),2), :) = [];
 HC19=Base(:,[4,6]);
@@ -310,12 +310,13 @@ xlabel('$School$, promedio 1960-2019','FontName','Serif','FontSize', 12,'interpr
 ylabel('$\Delta PIB_{pc}$, promedio 1960-2019','FontName','Serif','FontSize', 12,'interpreter','latex')
 title('Factores correlacionados, capital humano','FontName','Serif','FontSize', 12)
 saveas(gcf,'School_Growth','epsc');
+
 %% Evolución del PIB per cápita según el PWT 10.0
 clear all;
 clc;
 Countries={'United States'	'United Kingdom'	'Spain'	'Singapore'	'Brazil'	'South Korea'	'Guatemala'	'Botswana'	'Nigeria'	'India'	'Peru'	'Chile'	'Australia'};
 Identifiers={'USA','UK','ESP','SGP','BRA','KOR','GTM','BWA','NGA','IND','PER','CHI','AUS'};
-GDP_pc = xlsread('PWT.xlsx','EvolutionPWT','B6:N65');
+GDP_pc = xlsread('PWT14032021.xlsx','EvolutionPWT','B6:N65');
 [T,N]=size(GDP_pc);
 sample=[1960:1:1960+T-1];
 %%%%%%%%%
@@ -342,7 +343,7 @@ clear all;
 clc;
 Countries={'United States'	'United Kingdom'	'Spain'	'Singapore'	'Brazil'	'South Korea'	'Guatemala'	'Botswana'	'Nigeria'	'India'	'Ghana' 'China' 'Peru'	'Chile'	'Australia'};
 Identifiers={'USA','UK','ESP','SGP','BRA','KOR','GTM','BWA','NGA','IND','GHA','CHN','PER','CHI','AUS'};
-GDP_pc = xlsread('PWT.xlsx','EvolutionMPD','B6:M204');
+GDP_pc = xlsread('PWT14032021.xlsx','EvolutionMPD','B6:M204');
 [T,N]=size(GDP_pc);
 years=[1820:1:1820+T-1];
 Start=1960;
@@ -392,7 +393,7 @@ clear all;
 clc;
 Countries={'Peru','Chile','Colombia','Australia','New Zealand','Korea'};
 Identifiers={'PER','CHI','COL','AUS','NZL','KOR'};
-GDP_pc = xlsread('PWT.xlsx','EvolutionMPD','N6:S204');
+GDP_pc = xlsread('PWT14032021.xlsx','EvolutionMPD','N6:S204');
 [T,N]=size(GDP_pc);
 years=[1820:1:1820+T-1];
 Start=1960;
@@ -431,12 +432,13 @@ xlabel('Años','FontName','Serif','FontSize', 14);
 ylabel('Log PIB pc','FontName','Serif','FontSize', 14);
 legend(Identifiers,'FontName','Serif','FontSize', 10,'Location','southoutside','Orientation','horizontal')
 saveas(gcf,'Evolution_PCA_1820','epsc');
+
 %% Términos de intercambio y TFP
 clear all;
 clc;
-Base = xlsread('PWT.xlsx','TFP_TOT','A2:F61');
+Base = xlsread('PWT14032021.xlsx','TFP_TOT','B2:E61');
 %%%%%%%%%
-[~,Yhat]=ols2(Base(:,1),Base(:,5),1,0.05);
+[~,Yhat]=ols2(Base(:,1),Base(:,3),1,0.05);
 %%%%%%%%%
 figure(18)
 SS=scatter(Base(:,5),Base(:,1),'MarkerEdgeColor',[234, 84, 85]/255,...
@@ -450,7 +452,7 @@ ylabel('PTF, 1960-2019','FontName','Serif','FontSize', 12,'interpreter','latex')
 title('PTF y factores externos','FontName','Serif','FontSize', 12)
 saveas(gcf,'PTF_TOT1','epsc');
 %%%%%%%%%
-[~,Yhat]=ols2(Base(:,2),Base(:,6),1,0.05);
+[~,Yhat]=ols2(Base(:,2),Base(:,4),1,0.05);
 %%%%%%%%%
 figure(19)
 SS=scatter(Base(:,6),Base(:,2),'MarkerEdgeColor',[234, 84, 85]/255,...
