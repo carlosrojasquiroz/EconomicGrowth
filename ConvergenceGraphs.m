@@ -25,7 +25,7 @@ else
 end
 Y(i,1)=log(BarroEq(sample(i),j)./BarroEq(sample(i),1));
 end
-[~,Yhat1]=ols(Y,X,1,0.05);
+[~,Yhat1]=ols2(Y,X,1,0.05);
 Tend=2018;
 for i=1:length(sample)
 % X axis: log(GDPpc)
@@ -40,7 +40,7 @@ else
 end
 Y2(i,1)=log(BarroEq(sample(i),j)./BarroEq(sample(i),1));
 end
-[~,Yhat2]=ols(Y2,X2,1,0.05);
+[~,Yhat2]=ols2(Y2,X2,1,0.05);
 %%%%%%%%%%
 figure(1)
 scatter(X,Y,'MarkerEdgeColor',[234, 84, 85]/255,...
@@ -82,7 +82,7 @@ else
 end
 Y3(i,1)=log(BarroEq(sample(i),j)./BarroEq(sample(i),1));
 end
-[~,Yhat3]=ols(Y3,X3,1,0.05);
+[~,Yhat3]=ols2(Y3,X3,1,0.05);
 Tend=2018;
 for i=1:length(sample)
 % X axis: log(GDPpc)
@@ -97,7 +97,7 @@ else
 end
 Y4(i,1)=log(BarroEq(sample(i),j)./BarroEq(sample(i),1));
 end
-[~,Yhat4]=ols(Y4,X4,1,0.05);
+[~,Yhat4]=ols2(Y4,X4,1,0.05);
 %%%%%%%%%%
 figure(2)
 scatter(X,Y,'MarkerEdgeColor',[234, 84, 85]/255,...
@@ -127,14 +127,14 @@ Tend=1979;
 X5(:,1)=log(BarroEq(:,1));
 % Y axis: log(GDPpc2018/GDPpc1870)
 Y5(:,1)=log(BarroEq(:,2)./BarroEq(:,1));
-[~,Yhat5]=ols(Y5,X5,1,0.05);
+[~,Yhat5]=ols2(Y5,X5,1,0.05);
 
 Tend=2018;
 % X axis: log(GDPpc)
 X6(:,1)=log(BarroEq(:,1));
 % Y axis: log(GDPpc2018/GDPpc1870)
 Y6(:,1)=log(BarroEq(:,3)./BarroEq(:,1));
-[~,Yhat6]=ols(Y6,X6,1,0.05);
+[~,Yhat6]=ols2(Y6,X6,1,0.05);
 %%%%%%%%%%
 figure(3)
 scatter(X3,Y3,'MarkerEdgeColor',[234, 84, 85]/255,...
@@ -181,7 +181,7 @@ else
 end
 Y7(i,1)=log(BarroEq(sample(i),j)./BarroEq(sample(i),1));
 end
-[~,Yhat7]=ols(Y7,X7,1,0.05);
+[~,Yhat7]=ols2(Y7,X7,1,0.05);
 
 sample=[3     4     5     6     8     9    13    14    15    19    20   ...
     21    22    24    25    29    32    35    36    43    44    46  ...
@@ -199,7 +199,7 @@ else
 end
 Y8(i,1)=log(BarroEq(sample(i),j)./BarroEq(sample(i),1));
 end
-[~,Yhat8]=ols(Y8,X8,1,0.05);
+[~,Yhat8]=ols2(Y8,X8,1,0.05);
 %%%%%%%%%%
 figure(4)
 scatter(X7,Y7,'MarkerEdgeColor',[234, 84, 85]/255,...
