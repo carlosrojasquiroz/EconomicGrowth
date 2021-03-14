@@ -8,8 +8,6 @@ function [Betahat, DeBeta, Pvalue, RsquareAdj] = ols(Y,X,D,Alpha)
 %       X = Vector with the endogenous variable
 %       Y = Matrix with exogenous variables
 %       D = Binary variable. If D = 1, run the regression with a constant
-%       VCE = heteroskedasticity-robust standard errors. Binary variable. 
-%       If VCE = 1, robust heteroskedasticity matrix
 %       Alpha = statistical significance level
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     if D==1
