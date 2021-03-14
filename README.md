@@ -8,7 +8,7 @@ The repository has the following files:
 
        PWT14032021.xlsx
        DataBaseGrowth14032021.xlsx      
-       Graphs_GDPpc.m
+       GraphsGrowthSF.m
        FitSolowData.m
        ols.m
        ols2.m
