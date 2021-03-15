@@ -1,4 +1,4 @@
-# Economic growth 📈
+# 📈 Economic growth
 This repository houses Excel and Matlab files, which process data from Penn World Table (PWT10.0) and Maddison Project Database (MPD2020) to replicate figures and run regressions as in Acemoglu (2009) and Mankiw, Romer and Weil (1992).
 
 If you have questions, please contact me by email at:
