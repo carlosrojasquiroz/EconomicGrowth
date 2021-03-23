@@ -25,7 +25,7 @@ figure(1)
 StackedBars=DataPeru(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
 Contrib(3).CData = [48, 71, 94]/255; %Blue
-Contrib(1).CData = [234, 84, 85]/255; %Warn
+Contrib(1).CData = [234, 84, 85]/255; %Warm
 Contrib(2).CData = [147, 155, 98]/255; %Green
 title('Contabilidad del crecimiento: Perú','FontName','Serif','FontSize', 14)
 xlabel('Años','FontName','Serif','FontSize', 14);
@@ -39,7 +39,7 @@ figure(2)
 StackedBars=DataNewZealand(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
 Contrib(3).CData = [48, 71, 94]/255; %Blue
-Contrib(1).CData = [234, 84, 85]/255; %Warn
+Contrib(1).CData = [234, 84, 85]/255; %Warm
 Contrib(2).CData = [147, 155, 98]/255; %Green
 title('Contabilidad del crecimiento: Nueva Zelanda','FontName','Serif','FontSize', 14)
 xlabel('Años','FontName','Serif','FontSize', 14);
@@ -53,7 +53,7 @@ figure(3)
 StackedBars=DataAustralia(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
 Contrib(3).CData = [48, 71, 94]/255; %Blue
-Contrib(1).CData = [234, 84, 85]/255; %Warn
+Contrib(1).CData = [234, 84, 85]/255; %Warm
 Contrib(2).CData = [147, 155, 98]/255; %Green
 title('Contabilidad del crecimiento: Australia','FontName','Serif','FontSize', 14)
 xlabel('Años','FontName','Serif','FontSize', 14);
@@ -67,7 +67,7 @@ figure(4)
 StackedBars=DataKorea(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
 Contrib(3).CData = [48, 71, 94]/255; %Blue
-Contrib(1).CData = [234, 84, 85]/255; %Warn
+Contrib(1).CData = [234, 84, 85]/255; %Warm
 Contrib(2).CData = [147, 155, 98]/255; %Green
 title('Contabilidad del crecimiento: Corea','FontName','Serif','FontSize', 14)
 xlabel('Años','FontName','Serif','FontSize', 14);
@@ -81,7 +81,7 @@ figure(5)
 StackedBars=DataChile(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
 Contrib(3).CData = [48, 71, 94]/255; %Blue
-Contrib(1).CData = [234, 84, 85]/255; %Warn
+Contrib(1).CData = [234, 84, 85]/255; %Warm
 Contrib(2).CData = [147, 155, 98]/255; %Green
 title('Contabilidad del crecimiento: Chile','FontName','Serif','FontSize', 14)
 xlabel('Años','FontName','Serif','FontSize', 14);
@@ -95,7 +95,7 @@ figure(6)
 StackedBars=DataColombia(:,[2:4]);
 Contrib=bar(X,StackedBars,'stacked','FaceColor','flat','EdgeColor','none');
 Contrib(3).CData = [48, 71, 94]/255; %Blue
-Contrib(1).CData = [234, 84, 85]/255; %Warn
+Contrib(1).CData = [234, 84, 85]/255; %Warm
 Contrib(2).CData = [147, 155, 98]/255; %Green
 title('Contabilidad del crecimiento: Colombia','FontName','Serif','FontSize', 14)
 xlabel('Años','FontName','Serif','FontSize', 14);
